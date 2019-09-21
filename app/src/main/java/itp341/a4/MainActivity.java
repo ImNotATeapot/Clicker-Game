@@ -24,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewShoe;
     private TextView textViewTreat;
 
+    private TextView hydrantCost;
+    private TextView humanCost;
+    private TextView shoeCost;
+    private TextView treatCost;
+
     private ImageButton imageButtonMocha;
 
     private Button buttonHydrant;

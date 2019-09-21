@@ -5,8 +5,8 @@
     <string name="initialDogeValue">0</string>
     <string name="textHuman">Humans:</string>
     <string name="textFireHydrant">Fire Hydrants:</string>
-    <string name="textTreats">tr3@t$:</string>
-    <string name="textShoes">SHOES:</string>
+    <string name="textTreats">Treats</string>
+    <string name="textShoes">Shoes</string>
     <string name="buttonAddSymbol">+</string>
     <string name="textCost">Buy for </string>
     <string name="buttonBackground">#d86439a0</string>
