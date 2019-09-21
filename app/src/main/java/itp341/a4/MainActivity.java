@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewShoe;
     private TextView textViewTreat;
 
-    private TextView hydrantCost;
-    private TextView humanCost;
-    private TextView shoeCost;
-    private TextView treatCost;
+    private TextView hydrantCostTextView;
+    private TextView humanCostTextView;
+    private TextView shoeCostTextView;
+    private TextView treatCostTextView;
 
     private ImageButton imageButtonMocha;
 
@@ -59,6 +59,11 @@ public class MainActivity extends AppCompatActivity {
         textViewHuman = (TextView) findViewById(R.id.textViewHumanCount);
         textViewShoe = (TextView) findViewById(R.id.textViewShoesCount);
         textViewTreat = (TextView) findViewById(R.id.textViewTreatsCount);
+
+        hydrantCostTextView = (TextView) findViewById(R.id.hydrantTextView);
+        humanCostTextView = (TextView) findViewById(R.id.humanTextView);
+        shoeCostTextView = (TextView) findViewById(R.id.shoesTextView);
+        treatCostTextView = (TextView) findViewById(R.id.treatsTextView);
 
         Log.v(TAG, "Finished linking textviews");
 
@@ -98,12 +103,18 @@ public class MainActivity extends AppCompatActivity {
 
         Log.v(TAG, "Finished button listeners");
 
-        String output = getResources().getString(R.string.textCost) + " ";
+//        String output = getResources().getString(R.string.textCost) + " ";
+//
+//        buttonHydrant.setText(output + numHydrantCost);
+//        buttonHuman.setText(output + numHumanCost);
+//        buttonShoe.setText(output + numShoeCost);
+//        buttonTreat.setText(output + numTreatCost);
 
-        buttonHydrant.setText(output + numHydrantCost);
-        buttonHuman.setText(output + numHumanCost);
-        buttonShoe.setText(output + numShoeCost);
-        buttonTreat.setText(output + numTreatCost);
+        hydrantCostTextView.setText(Long.toString(numHydrantCost));
+        shoeCostTextView.setText(Long.toString(numShoeCost));
+        humanCostTextView.setText(Long.toString(numHumanCost));
+        treatCostTextView.setText(Long.toString(numTreatCost));
+
 
         updateBuyButtons();
         updateDogeCount();
@@ -138,7 +149,8 @@ public class MainActivity extends AppCompatActivity {
                     ++numHuman;
                     numHumanCost *= COST_MULTIPLIER;
                     Log.v(TAG, "Humans now cost " + numHumanCost);
-                    ((Button) v).setText(getResources().getString(R.string.textCost) + " " + numHumanCost);
+//                    ((Button) v).setText(getResources().getString(R.string.textCost) + " " + numHumanCost);
+                    humanCostTextView.setText(Long.toString(numHumanCost));
                     textViewHuman.setText(numHuman + "");
                     break;
 
@@ -148,7 +160,8 @@ public class MainActivity extends AppCompatActivity {
                     ++numHydrant;
                     numHydrantCost *= COST_MULTIPLIER;
                     Log.v(TAG, "Hydrants now cost " + numHydrantCost);
-                    ((Button) v).setText(getResources().getString(R.string.textCost) + " " + numHydrantCost);
+//                    ((Button) v).setText(getResources().getString(R.string.textCost) + " " + numHydrantCost);
+                    hydrantCostTextView.setText(Long.toString(numHydrantCost));
                     textViewHydrant.setText(numHydrant + "");
                     break;
 
@@ -158,7 +171,8 @@ public class MainActivity extends AppCompatActivity {
                     ++numShoe;
                     numShoeCost *= COST_MULTIPLIER;
                     Log.v(TAG, "Shoes now cost " + numShoeCost);
-                    ((Button) v).setText(getResources().getString(R.string.textCost) + " " + numShoeCost);
+//                    ((Button) v).setText(getResources().getString(R.string.textCost) + " " + numShoeCost);
+                    shoeCostTextView.setText(Long.toString(numShoeCost));
                     textViewShoe.setText(numShoe + "");
                     break;
 
@@ -168,7 +182,8 @@ public class MainActivity extends AppCompatActivity {
                     ++numTreat;
                     numTreatCost *= COST_MULTIPLIER;
                     Log.v(TAG, "Treats now cost " + numTreatCost);
-                    ((Button) v).setText(getResources().getString(R.string.textCost) + " " + numTreatCost);
+//                    ((Button) v).setText(getResources().getString(R.string.textCost) + " " + numTreatCost);
+                    treatCostTextView.setText(Long.toString(numTreatCost));
                     textViewTreat.setText(numTreat + "");
                     break;
             }

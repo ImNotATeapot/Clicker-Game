@@ -24,6 +24,7 @@
             android:gravity="center"
             android:textColor="#FFFFFF"
             android:text="@string/gameTitle"
+            android:layout_marginHorizontal="@dimen/layout_padding"
             android:textStyle="bold" />
 
         <TextView
@@ -34,6 +35,7 @@
             android:background="#40000000"
             android:gravity="center"
             android:text="@string/dogetitle"
+            android:layout_marginHorizontal="@dimen/layout_padding"
             android:textColor="#FFFFFF" />
 
         <TextView
@@ -46,30 +48,167 @@
             android:text="@string/initialDogeValue"
             android:textSize="32dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginHorizontal="@dimen/layout_padding"
             android:textColor="#FFFFFF" />
 
-        <ImageButton
-            android:id="@+id/imageButtonMocha"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:adjustViewBounds="false"
-            android:cropToPadding="false"
-            android:scaleType="centerCrop"
-            android:src="@drawable/doge" />
+
+            <ImageButton
+                android:id="@+id/imageButtonMocha"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false"
+                android:scaleType="centerCrop"
+                android:src="@drawable/doge" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:paddingHorizontal="24dp"
+            android:paddingHorizontal="@dimen/layout_padding"
             android:orientation="vertical">
 
-            <!-- Human Button -->
+            <!-- Shoes Button -->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_heights"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/button_heights"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8dp"
+                        android:src="@drawable/shoes" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/textShoes"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/textViewColor"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/shoesTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="4dp"
+                            android:tag="2"
+                            android:text="@string/initialDogeValue"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/subTextColor"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textViewShoesCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingRight="16dp"
+                        android:text="@string/initialDogeValue"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                        android:textColor="#3CFFFFFF"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonBuyShoe"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_heights"
+                    android:background="@drawable/textbox" />
+            </RelativeLayout>
+
+            <!--Treats Button-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/button_spacing">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_heights"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/button_heights"
+                        android:layout_height="match_parent"
+                        android:padding="4dp"
+                        android:src="@drawable/cookie" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/textTreats"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/textViewColor"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/treatsTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="4dp"
+                            android:tag="1"
+                            android:text="@string/initialDogeValue"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/subTextColor"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textViewTreatsCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingRight="16dp"
+                        android:text="@string/initialDogeValue"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                        android:textColor="#3CFFFFFF"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonBuyTreat"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_heights"
+                    android:background="@drawable/textbox" />
+            </RelativeLayout>
+
+            <!--Humans Button-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/button_spacing">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -133,140 +272,7 @@
                     android:background="@drawable/textbox"/>
             </RelativeLayout>
 
-            <!-- Treat button -->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/button_spacing">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/button_heights"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="@dimen/button_heights"
-                        android:layout_height="match_parent"
-                        android:padding="4dp"
-                        android:src="@drawable/cookie"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/textTreats"
-                            android:layout_gravity="left"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginTop="4dp"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                            android:textColor="@color/textViewColor"
-                            android:textStyle="bold"/>
-
-                        <TextView
-                            android:id="@+id/treatsTextView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="left"
-                            android:layout_marginLeft="4dp"
-                            android:tag="1"
-                            android:text="@string/initialDogeValue"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/subTextColor"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/textViewTreatsCount"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="right"
-                        android:text="@string/initialDogeValue"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-                        android:textColor="#3CFFFFFF"
-                        android:paddingRight="16dp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <Button
-                    android:id="@+id/buttonBuyHydrant"
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/button_heights"
-                    android:background="@drawable/textbox" />
-            </RelativeLayout>
-
-
-            <!-- Shoes button -->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/button_spacing">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/button_heights"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="@dimen/button_heights"
-                        android:layout_height="match_parent"
-                        android:paddingLeft="8dp"
-                        android:src="@drawable/shoes"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/textShoes"
-                            android:layout_gravity="left"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginTop="4dp"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                            android:textColor="@color/textViewColor"
-                            android:textStyle="bold"/>
-
-                        <TextView
-                            android:id="@+id/shoesTextView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="left"
-                            android:layout_marginLeft="4dp"
-                            android:tag="2"
-                            android:text="@string/initialDogeValue"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/subTextColor"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                    <TextView
-                        android:id="@+id/textViewShoesCount"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/initialDogeValue"
-                        android:gravity="right"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-                        android:textColor="#3CFFFFFF"
-                        android:paddingRight="16dp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-                <Button
-                    android:id="@+id/buttonBuyTreat"
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/button_heights"
-                    android:background="@drawable/textbox"/>
-            </RelativeLayout>
-
-            <!-- Hydrants button -->
+            <!--Hydrant Button-->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -324,7 +330,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
                 <Button
-                    android:id="@+id/buttonBuyShoe"
+                    android:id="@+id/buttonBuyHydrant"
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/button_heights"
@@ -332,6 +338,17 @@
             </RelativeLayout>
 
         </LinearLayout>
+        <ImageButton
+            android:id="@+id/infoButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:scaleType="centerCrop"
+            android:src="@drawable/info" />
     </LinearLayout>
 
 </RelativeLayout>
