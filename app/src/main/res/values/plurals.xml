@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <plurals name="click_times">
+        <item quantity="zero">Clicked %d times</item>
+        <item quantity="one">Clicked %d time</item>
+        <item quantity="other">Clicked %d times</item>
+
+    </plurals>
+</resources>
