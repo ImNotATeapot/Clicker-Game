@@ -3,10 +3,12 @@ package itp341.a4;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonHuman;
     private Button buttonShoe;
     private Button buttonTreat;
+    private ImageButton infoButton;
 
     private long numDoge = 0;
     private long numHydrant = 0;
@@ -87,12 +90,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         DogeClickerButtonListener listener = new DogeClickerButtonListener();
 
         buttonHydrant = (Button) findViewById(R.id.buttonBuyHydrant);
         buttonHuman = (Button) findViewById(R.id.buttonBuyHuman);
         buttonShoe = (Button) findViewById(R.id.buttonBuyShoe);
         buttonTreat = (Button) findViewById(R.id.buttonBuyTreat);
+        infoButton = (ImageButton) findViewById(R.id.infoButton);
 
         Log.v(TAG, "Finished linking buttons");
 
@@ -100,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         buttonHuman.setOnClickListener(listener);
         buttonShoe.setOnClickListener(listener);
         buttonTreat.setOnClickListener(listener);
+        infoButton.setOnClickListener(listener);
 
         Log.v(TAG, "Finished button listeners");
 
@@ -143,6 +149,18 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             Log.d(TAG, "button clicked with id: " + v.getId());
             switch(v.getId()){
+                case R.id.infoButton:
+                    String string = String.format(getResources().getString(R.string.toast),
+                            numShoe, numShoeMultiplier*numShoe,
+                            numTreat, numTreatMultiplier*numTreat,
+                            numHuman, numHumanMultiplier*numHuman,
+                            numHydrant, numHydrantMultiplier*numHydrant);
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                            string,
+                            Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.BOTTOM, 0, 100);
+                    toast.show();
+                    break;
                 case R.id.buttonBuyHuman:
                     Log.v(TAG, "Buying human for " + numHumanCost + " with " + numDoge + " in bank");
                     numDoge -= numHumanCost;

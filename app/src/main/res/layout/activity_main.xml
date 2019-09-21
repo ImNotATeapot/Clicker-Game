@@ -51,18 +51,47 @@
             android:layout_marginHorizontal="@dimen/layout_padding"
             android:textColor="#FFFFFF" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/imageButtonMocha"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp"
-                android:adjustViewBounds="false"
-                android:cropToPadding="false"
-                android:scaleType="centerCrop"
-                android:src="@drawable/doge" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:id="@+id/infoButton"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:adjustViewBounds="false"
+                        android:cropToPadding="false"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/info" />
 
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/imageButtonMocha"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:adjustViewBounds="false"
+                        android:cropToPadding="false"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/doge" />
+
+                 </LinearLayout>
+
+            </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -338,17 +367,7 @@
             </RelativeLayout>
 
         </LinearLayout>
-        <ImageButton
-            android:id="@+id/infoButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="bottom|right"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            android:adjustViewBounds="false"
-            android:cropToPadding="false"
-            android:scaleType="centerCrop"
-            android:src="@drawable/info" />
+
     </LinearLayout>
 
 </RelativeLayout>
