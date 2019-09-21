@@ -60,67 +60,101 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingHorizontal="40dp"
             android:orientation="vertical">
 
+            <!-- Human Button -->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:id="@+id/buttonBuyHuman"
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#d86439a0"
-                    android:text="@string/buttonAddSymbol" />
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="@dimen/button_heights"
                     android:orientation="horizontal">
 
+                    <ImageView
+                        android:layout_width="@dimen/button_heights"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/lady"/>
+
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textViewHumanCount"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/initialDogeValue"
-                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
                             android:id="@+id/textView2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:maxWidth="14dp"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="8dp"
                             android:text="@string/textHuman"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/humanTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="8dp"
+                            android:tag="0"
+                            android:text="@string/initialDogeValue"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="#4CAF50"
+                            android:textStyle="bold" />
+
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textViewHumanCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/initialDogeValue"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                        android:textColor="#3CFFFFFF"
+                        android:paddingRight="16dp"
+                        android:textStyle="bold" />
+
                 </LinearLayout>
+                <Button
+                    android:id="@+id/buttonBuyHuman"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_heights"
+                    android:background="@drawable/textbox"/>
             </RelativeLayout>
 
+            <!-- Treat button -->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/button_spacing">
 
+                <!-- Button background -->
                 <Button
                     android:id="@+id/buttonBuyHydrant"
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/button_heights"
                     android:gravity="fill_horizontal"
                     android:padding="30dp"
                     android:text="@string/buttonAddSymbol" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="@dimen/button_heights"
                     android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/button_heights"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/cookie"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -132,6 +166,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/textTreats"
+                            android:layout_gravity="center_horizontal"
                             android:textColor="#04ff00" />
 
                         <TextView
@@ -141,27 +176,30 @@
                             android:layout_alignBaseline="@+id/textView3"
                             android:layout_marginStart="28dp"
                             android:text="@string/initialDogeValue"
+                            android:layout_gravity="center_horizontal"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>
 
+
+            <!-- Shoes button -->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/button_spacing">
 
                 <Button
                     android:id="@+id/buttonBuyTreat"
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/button_heights"
                     android:background="#56bf51"
-                    android:gravity="center"
-                    android:text="@string/buttonAddSymbol" />
+                    android:gravity="center"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="@dimen/button_heights"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -174,7 +212,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="26dp"
-                            android:gravity="fill_vertical|top"
                             android:text="@string/textShoes"
                             android:textColor="#00ffaa" />
 
@@ -183,6 +220,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/initialDogeValue"
+                            android:layout_gravity="center_horizontal"
                             android:textAppearance="?android:attr/textAppearanceLarge" />
                     </LinearLayout>
                 </LinearLayout>
