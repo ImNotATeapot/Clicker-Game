@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,167 +11,297 @@
     tools:context="itp341.a4.MainActivity"
     android:background="#685252">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dogetitle"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="216dp"
-        android:background="#bbcdbf1f"
-        android:layout_marginTop="100dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textHuman"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/textView2"
-        android:maxWidth="14dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:gravity="bottom" />
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textTreats"
-        android:id="@+id/textView3"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/textViewTreatsCount"
-        android:textColor="#04ff00" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:background="#40000000"
+                android:gravity="center"
+                android:text="@string/gameTitle"
+                android:textColor="#ffffff" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textShoes"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/imageButtonMocha"
-        android:layout_toEndOf="@+id/textViewTreatsCount"
-        android:layout_marginTop="26dp"
-        android:textColor="#00ffaa"
-        android:gravity="fill_vertical|top" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="#40000000"
+                android:gravity="center"
+                android:text="@string/dogetitle"
+                android:textColor="#ffffff" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textFireHydrant"
-        android:id="@+id/textView5"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentEnd="true"
-        android:textColor="#0000ff"
-        android:textSize="25dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="50dp" />
+            <TextView
+                android:id="@+id/textViewDogeCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#40000000"
+                android:gravity="center"
+                android:text="@string/initialDogeValue"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gameTitle"
-        android:id="@+id/textView6"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/textView4" />
+            <ImageButton
+                android:id="@+id/imageButtonMocha"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mocha" />
+        </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/initialDogeValue"
-        android:id="@+id/textViewDogeCount"
-        android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/textView4"
-        android:gravity="left" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/initialDogeValue"
-        android:id="@+id/textViewHydrantCount"
-        android:layout_alignTop="@+id/textView5"
-        android:layout_toStartOf="@+id/textView5" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/initialDogeValue"
-        android:id="@+id/textViewHumanCount"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/initialDogeValue"
-        android:id="@+id/textViewTreatsCount"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignStart="@+id/textView5"
-        android:layout_marginStart="28dp" />
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/hydrant" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/initialDogeValue"
-        android:id="@+id/textViewShoesCount"
-        android:layout_below="@+id/textView4"
-        android:layout_centerHorizontal="true" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-    <ImageButton
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:id="@+id/imageButtonMocha"
-        android:src="@drawable/mocha"
-        android:scaleType="centerCrop"
-        android:cropToPadding="false"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:adjustViewBounds="false" />
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginBottom="50dp"
+                            android:text="@string/textFireHydrant"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#0000ff"
+                            android:textSize="25dp" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonAddSymbol"
-        android:id="@+id/buttonBuyHuman"
-        android:layout_above="@+id/textViewHumanCount"
-        android:layout_alignStart="@+id/textViewHumanCount"
-        android:background="#d86439a0" />
+                        <TextView
+                            android:id="@+id/hydrantTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView" />
+                    </LinearLayout>
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonAddSymbol"
-        android:id="@+id/buttonBuyHydrant"
-        android:layout_below="@+id/textView5"
-        android:layout_alignStart="@+id/textView6"
-        android:padding="30dp"
-        android:gravity="fill_horizontal" />
+                    <TextView
+                        android:id="@+id/textViewHydrantCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/initialDogeValue"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonAddSymbol"
-        android:id="@+id/buttonBuyTreat"
-        android:layout_below="@+id/textView3"
-        android:layout_alignStart="@+id/textViewHydrantCount"
-        android:background="#56bf51"
-        android:gravity="center" />
+                </LinearLayout>
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonAddSymbol"
-        android:id="@+id/buttonBuyShoe"
-        android:layout_alignTop="@+id/textViewShoesCount"
-        android:layout_alignStart="@+id/buttonBuyTreat" />
+                <Button
+                    android:id="@+id/buttonBuyShoe"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buttonAddSymbol" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/shoes" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="26dp"
+                            android:gravity="fill_vertical|top"
+                            android:text="@string/textShoes"
+                            android:textColor="#00ffaa" />
+
+                        <TextView
+                            android:id="@+id/shoesTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textViewShoesCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/initialDogeValue"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonBuyTreat"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#56bf51"
+                    android:gravity="center"
+                    android:text="@string/buttonAddSymbol" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/lady" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:text="@string/textHuman"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/humanTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textViewHumanCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/initialDogeValue"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonBuyHuman"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#d86439a0"
+                    android:text="@string/buttonAddSymbol" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/cookie" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/textTreats"
+                            android:textColor="#04ff00" />
+
+                        <TextView
+                            android:id="@+id/treatsTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textViewTreatsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView3"
+                        android:layout_marginStart="28dp"
+                        android:text="@string/initialDogeValue"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonBuyHydrant"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:padding="30dp"
+                    android:text="@string/buttonAddSymbol" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
