@@ -32,7 +32,8 @@
                 android:background="#40000000"
                 android:gravity="center"
                 android:text="@string/gameTitle"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView"
@@ -50,6 +51,7 @@
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:textSize="32dp"
                 android:background="#40000000"
                 android:gravity="center"
                 android:text="@string/initialDogeValue"
