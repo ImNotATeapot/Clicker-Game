@@ -53,6 +53,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (savedInstanceState != null) {
+            long[] values = savedInstanceState.getLongArray("values");
+            numDoge = values[0];
+            numShoe = values[1];
+            numTreat = values[2];
+            numHuman = values[3];
+            numHydrant = values[4];
+            numShoeCost = values[5];
+            numTreatCost = values[6];
+            numHumanCost = values[7];
+            numHydrantCost = values[8];
+        }
         setContentView(R.layout.activity_main);
 
         Log.d(TAG, "onCreate Start");
@@ -121,6 +133,10 @@ public class MainActivity extends AppCompatActivity {
         humanCostTextView.setText(Long.toString(numHumanCost));
         treatCostTextView.setText(Long.toString(numTreatCost));
 
+        textViewShoe.setText(Long.toString(numShoe));
+        textViewTreat.setText(Long.toString(numTreat));
+        textViewHuman.setText(Long.toString(numHuman));
+        textViewHydrant.setText(Long.toString(numHydrant));
 
         updateBuyButtons();
         updateDogeCount();
@@ -209,5 +225,12 @@ public class MainActivity extends AppCompatActivity {
             updateBuyButtons();
             updateDogeCount();
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outstate) {
+        super.onSaveInstanceState(outstate);
+        long [] values = {numDoge, numShoe, numTreat, numHuman, numHydrant, numShoeCost, numTreatCost, numHumanCost, numHydrantCost};
+        outstate.putLongArray("values", values);
     }
 }

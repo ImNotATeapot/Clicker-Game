@@ -118,7 +118,7 @@
                             android:text="@string/textShoes"
                             android:textAppearance="@style/TextAppearance.AppCompat.Large"
                             android:textColor="@color/textViewColor"
-                            tools:textStyle="bold" />
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/shoesTextView"

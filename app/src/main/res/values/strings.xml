@@ -3,8 +3,8 @@
     <string name="gameTitle">Doge Clicker</string>
     <string name="dogetitle">Doge</string>
     <string name="initialDogeValue">0</string>
-    <string name="textHuman">Humans:</string>
-    <string name="textFireHydrant">Fire Hydrants:</string>
+    <string name="textHuman">Humans</string>
+    <string name="textFireHydrant">Fire Hydrants</string>
     <string name="textTreats">Treats</string>
     <string name="textShoes">Shoes</string>
     <string name="buttonAddSymbol">+</string>
